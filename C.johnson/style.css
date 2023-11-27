@@ -1,0 +1,77 @@
+#top {
+    display: flex; /*親要素をフレックスに指定*/
+    justify-content: center;  /*横方向に中央揃え*/
+    align-items: center; /*縦方向に中央揃え*/
+}
+
+#top_icon {
+    width:100px;
+    height:100px;
+    border-radius:50%; /* 角丸を作るプロパティ */
+    overflow: hidden; /* はみ出した画像を隠すプロパティ */
+    }
+
+#top_icon img {
+    width:100%;
+    }
+
+#contents {
+    display: flex; /*親要素をフレックスに指定*/
+    flex-direction: column; /*縦並び*/
+    justify-content: center;  /*横方向に中央揃え*/
+    align-items: center; /*縦方向に中央揃え*/
+    list-style-type: none; /*箇条書きの・を取り除く*/
+    width: 100%; /* 親要素いっぱいに広がるように設定 */
+}
+
+.buttons {
+    border: solid 2px black;
+    border-radius: 20px;  /*囲みの角を丸く*/
+    background-color: black;
+    width: 30%; /*親要素に対して30％ レスポンシブ対応*/
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer; /*カーソルが指差しのマークになる*/
+}
+
+.buttons:hover { /*マウスを当てると...以下スタイルが適応*/
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+
+.buttons a {
+    text-decoration: none; /* アンダーラインを非表示にする */
+}
+
+.buttons:hover a {
+    color: red; /* ホバー時のリンクの色を変更 */
+}
+
+.button-content {
+    display: flex;
+    align-items: center;
+    height: 2em; /* 1行分の高さに調整 */
+}
+
+.photo01 {
+    border-radius:20%; /* 角丸を作るプロパティ */
+    overflow: hidden; /* はみ出した画像を隠すプロパティ */
+    flex: 1 0 10%;
+    margin: 0; /* 追加: marginをゼロに設定 */
+    }
+
+.photo01 img {
+    width:100%;
+    }
+
+.sns-name {
+    color: white;
+    width: 100%;
+    flex: 9 0 90%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.buttons:hover .sns-name {
+    color: red;
+}
