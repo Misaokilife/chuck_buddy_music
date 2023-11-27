@@ -1,27 +1,31 @@
-#top {
-    display: flex; /*親要素をフレックスに指定*/
-    justify-content: center;  /*横方向に中央揃え*/
-    align-items: center; /*縦方向に中央揃え*/
+@charset "utf-8";
+
+html, *{
+margin:0;
+padding:0;
+box-sizing: border-box;
+font-size:16px; /*全体のフォントサイズの基準*/
 }
 
-#top_icon {
+.top {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.top_icon {
     width:100px;
     height:100px;
+    margin: 0 auto;
     border-radius:50%; /* 角丸を作るプロパティ */
     overflow: hidden; /* はみ出した画像を隠すプロパティ */
     }
 
-#top_icon img {
+.top_icon img {
     width:100%;
     }
 
-#contents {
-    display: flex; /*親要素をフレックスに指定*/
-    flex-direction: column; /*縦並び*/
-    justify-content: center;  /*横方向に中央揃え*/
-    align-items: center; /*縦方向に中央揃え*/
-    list-style-type: none; /*箇条書きの・を取り除く*/
-    width: 100%; /* 親要素いっぱいに広がるように設定 */
+.contents {
+    text-align: center;
 }
 
 .buttons {
@@ -29,8 +33,10 @@
     border-radius: 20px;  /*囲みの角を丸く*/
     background-color: black;
     width: 30%; /*親要素に対して30％ レスポンシブ対応*/
+    max-width: 300px;
     padding: 10px;
-    margin: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px; /* ボタン間の余白を追加 */
     cursor: pointer; /*カーソルが指差しのマークになる*/
 }
 
@@ -50,14 +56,13 @@
 .button-content {
     display: flex;
     align-items: center;
-    height: 2em; /* 1行分の高さに調整 */
+    height: 1.5em; /* 1行分の高さに調整 */
 }
 
 .photo01 {
     border-radius:20%; /* 角丸を作るプロパティ */
     overflow: hidden; /* はみ出した画像を隠すプロパティ */
     flex: 1 0 10%;
-    margin: 0; /* 追加: marginをゼロに設定 */
     }
 
 .photo01 img {
